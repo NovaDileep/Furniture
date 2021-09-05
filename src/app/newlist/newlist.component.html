@@ -1,0 +1,39 @@
+<div class="card">
+    
+    <div class="card-header">
+    <button class="btn btn-primary active">{{title}}</button>
+    <button  class="btn " (click)="used()">Used Furnitures</button>
+    </div>
+    <div class="card-body">
+       <div class="table-responsive">
+           <table class="table">
+               <thead>
+                   <tr>
+                       <th>Furniture</th>                   
+                       <th>Type</th>
+                       <th>Price</th>
+                       <th>Rating</th>
+                       <th>Description</th>
+                       
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr *ngFor='let newl of newlist'>
+                       <td><img 
+                        [src]='newl.imageurl'
+                        [title]='newl.Name'
+                        [style.width.px]='imageWidth'
+                        [style.height.px]='imageHeight'
+                        [style.margin.px]='imageMargin'></td>
+                        <td>{{newl.Name}}</td>
+                        <td>{{newl.Price}}</td>
+                        <td>{{newl.Rating}}</td>
+                        <td>{{newl.Description}}</td>
+                        
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+    </div>
+
+</div>

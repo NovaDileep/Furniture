@@ -1,0 +1,39 @@
+<div class="card">
+    
+    <div class="card-header">
+    <button class="btn" (click)="new()">Latest Furnitures</button>
+    <button  class="btn btn-primary active">{{title}}</button>
+    </div>
+    <div class="card-body">
+       <div class="table-responsive">
+           <table class="table">
+               <thead>
+                   <tr>
+                       <th>Furniture</th>                   
+                       <th>Type</th>
+                       <th>Price</th>
+                       <th>Rating</th>
+                       <th>Description</th>
+                       
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr *ngFor='let old of oldlist'>
+                       <td><img 
+                        [src]='old.imageurl'
+                        [title]='old.Name'
+                        [style.width.px]='imageWidth'
+                        [style.height.px]='imageHeight'
+                        [style.margin.px]='imageMargin'></td>
+                        <td>{{old.Name}}</td>
+                        <td>{{old.Price}}</td>
+                        <td>{{old.Rating}}</td>
+                        <td>{{old.Description}}</td>
+                        
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+    </div>
+
+</div>
